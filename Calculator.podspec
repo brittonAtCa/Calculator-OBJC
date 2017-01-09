@@ -11,7 +11,6 @@ SUMMARY
 
   s.requires_arc     = true
   s.ios.deployment_target = '6.0'
-  s.osx.deployment_target = '10.8'
   s.source           = {:git => 'https://github.com/brittonAtCa/Calculator-OBJC.git'}
 
   s.source_files     = 'Calculator/**/*.{h,m}'
