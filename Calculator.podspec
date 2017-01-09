@@ -18,4 +18,6 @@ SUMMARY
   s.dependency       'Unirest-APIMATIC'
   s.dependency       'JSONModel'
   s.dependency       'ISO8601DateFormatter', '~> 0.7'
+
+  s.xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'}
 end
