@@ -13,8 +13,8 @@
 #import "HttpResponse.h"
 #import "HttpStringResponse.h"
 #import "UNIHTTPRequestWithBody.h"
-//#import "UNIRest.h"
-#import <Unirest-APIMATIC/UNIRest.h>
+#import "UNIRest.h"
+//#import <Unirest-APIMATIC/UNIRest.h>
 
 @interface UnirestClient : NSObject<IHttpClient>
 
