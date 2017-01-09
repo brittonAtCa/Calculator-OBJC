@@ -10,7 +10,7 @@ SUMMARY
   s.author           = { "APIMATIC" => "support@apimatic.io" }
 
   s.requires_arc     = true
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '9.0'
   s.source           = {:git => 'https://github.com/brittonAtCa/Calculator-OBJC.git'}
 
   s.source_files     = 'Calculator/**/*.{h,m}'
