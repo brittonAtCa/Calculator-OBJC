@@ -46,7 +46,6 @@
 		AAC751CC6398471D8AE95DF2 /* UnirestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D7A678B8A985E2C50CBFF /* UnirestClient.m */; };
 		AAC9784606712E2F510C5892 /* NSDate+extension.h in Headers */ = {isa = PBXBuildFile; fileRef = AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AACAC6006310A90958111386 /* OperationTypeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7B7A47F039A62131EB4751 /* OperationTypeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAD0FE4E6546B42C42539D57 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA940686A027FAC0683E87AE /* BaseController.m */; };
 		AAD5ABCDB677335878B9BC9B /* SimpleCalculatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2114E8268A2B37A47898FF /* SimpleCalculatorController.m */; };
 		AAD8F51F714DD5966CCD659B /* HttpBodyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6B29F99CA666FECC5C487E /* HttpBodyRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAD9244039DF31452C9D7C2B /* Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFDA2A62B62D6847BB95686 /* Configuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -318,7 +317,7 @@
 		AAD86B0C4A909E780CCAF44D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = APIMatic;
 			};
 			buildConfigurationList = AA3D5C81EBA16BCDBA6678EE /* Build configuration list for PBXProject "Calculator" */;
@@ -413,7 +412,6 @@
 				AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */,
 				AAD5ABCDB677335878B9BC9B /* SimpleCalculatorController.m in Sources */,
 				AA751EC3D8D1E1F02BC41D50 /* HttpBodyRequest.m in Sources */,
-				AAD0FE4E6546B42C42539D57 /* BaseController.m in Sources */,
 				AAC751CC6398471D8AE95DF2 /* UnirestClient.m in Sources */,
 				AADE4B211C778689E60B2D58 /* HttpContext.m in Sources */,
 				AA19178EE1D12F29A92B4F31 /* HttpResponse.m in Sources */,
@@ -437,7 +435,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -448,19 +445,24 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -521,7 +523,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -532,12 +533,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -550,7 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
